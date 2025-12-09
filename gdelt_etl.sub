@@ -1,0 +1,22 @@
+# gdelt_etl.sub - Full Batch Submission
+universe = container
+container_image = file:///staging/jgillett/R_tidyverse_FITSio.sif
+executable = gdelt_wrapper.sh
+
+log    = logs/gdelt_$(year)_$(month).log
+output = logs/gdelt_$(year)_$(month).out
+error  = logs/gdelt_$(year)_$(month).err
+
+request_cpus   = 1
+request_memory = 4GB
+request_disk   = 4GB
+
+transfer_input_files = process_month.R
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+
+
+arguments = $(year) $(month)
+
+
+queue year, month from job_list.txt
