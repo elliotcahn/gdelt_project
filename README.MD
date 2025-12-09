@@ -22,8 +22,3 @@ These files run locally to merge results and test hypotheses.
 1.  **Correlation**: There is a significant positive correlation ($\beta \approx 0.59$) between event stability and media tone.
 2.  **Conflict Impact**: Physical conflicts ($\beta \approx -11.8$) lower media sentiment much more than verbal conflicts ($\beta \approx -8.3$).
 3.  **Prediction**: A spike in conflict events strongly predicts a drop in media sentiment ($R^2 \approx 0.63$).
-
-## Quick Start
-1.  Submit jobs: `condor_submit gdelt_etl.sub`
-2.  Merge results: `Rscript analyze.R`
-3.  Run models: `Rscript threemodels.R`
