@@ -1,4 +1,4 @@
-# GDELT Data Analysis (2018-2022)
+# Matching Event Intensity with Media Mood
 
 This project analyzes the relationship between global event intensity (**GoldsteinScale**) and media sentiment (**AvgTone**) using 5 years of GDELT data. We used HTCondor to parallelize the processing of thousands of daily log files.
 
